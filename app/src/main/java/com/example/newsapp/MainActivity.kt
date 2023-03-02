@@ -30,12 +30,6 @@ class MainActivity : AppCompatActivity() {
              Log.d("abhi" , "observer executed")
          finalData = it
          adaptercall() })
-        //        val db = myApp.database
-//        Log.d("abhi" , "main_act")
-//        val viewModel : NewsViewModel by viewModels()
-//        viewModel.initrepo(db)
-//        viewModel.call_api()
-//        val myData = viewModel.getSavedNews()
     }
 
     private fun adaptercall() {

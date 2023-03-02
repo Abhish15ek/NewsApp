@@ -14,13 +14,13 @@ private val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
 const val BASE_URL = "https://newsapi.org/v2/"
 const val API_KEY ="92dd2363daf24f668b72b0733d577f20"
 interface NewsInterface {
-    @GET("top-headlines")
-    suspend fun getHeadlines(@Query("country") country: String = "in",@Query("page")
+    @GET("everything")
+    suspend fun getHeadlines(@Query("q") q: String = "apple",@Query("page")
     pageNumber: Int = 1, @Query("apikey") apikey: String = API_KEY) : Response<NewsArticle>
 // Check call on it
-    @GET("everything")
-    suspend fun getEverthing(@Query("q") country: String = "in",@Query("page")
-pageNumber: Int = 1, @Query("apikey") apikey: String = API_KEY) : Response<NewsArticle>
+//    @GET("everything")
+//    suspend fun getEverthing(@Query("q") country: String = "in",@Query("page")
+//pageNumber: Int = 1, @Query("apikey") apikey: String = API_KEY) : Response<NewsArticle>
 }
 
 object NewsService{

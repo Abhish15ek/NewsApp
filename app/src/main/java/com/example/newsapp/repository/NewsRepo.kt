@@ -36,8 +36,8 @@ class NewsRepo(private val database: NewsDB) {
         return response
     }
 
-    suspend fun getAllNews(country: String, pageNumber: Int) =
-        NewsService.newsInstance.getEverthing(country, pageNumber)
+//    suspend fun getAllNews(country: String, pageNumber: Int) =
+//        NewsService.newsInstance.getEverthing(q, pageNumber)
 
 //    suspend fun saveNews(article: NewsModel) = database.newsDao().insertNews(article)
 
