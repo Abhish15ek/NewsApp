@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">NewsApp</string>
     <string name="textview">TextView</string>
+    <string name="Headlines">Headlines</string>
+    <string name="HEADLINES">HEADLINES</string>
+    <string name="back">back</string>
+    <string name="b">b</string>
 </resources>

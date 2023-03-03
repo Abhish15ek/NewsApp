@@ -23,7 +23,7 @@ class Adapter(private val context: Context, private val items: List<NewsModel>) 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val image: ImageView = view.findViewById(R.id.imageView)
         val title: TextView = view.findViewById(R.id.textTitle)
-        val description: TextView = view.findViewById(R.id.textAuthor)
+        val author: TextView = view.findViewById(R.id.textAuthor)
         val date: TextView = view.findViewById(R.id.textPublishedAt)
     }
 
@@ -38,7 +38,7 @@ class Adapter(private val context: Context, private val items: List<NewsModel>) 
             .load(item.urlToImage)
             .into(holder.image)
             holder.title.text = item.title
-            holder.description.text = item.description
+            holder.author.text= item.author
             holder.date.text = item.publishedAt
 
         holder.itemView.setOnClickListener {

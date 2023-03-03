@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:paddingHorizontal="16dp"
     android:layout_height="match_parent"
+    android:background="@color/material_dynamic_neutral20"
     >
 
     <androidx.cardview.widget.CardView
@@ -17,60 +18,70 @@
         app:cardCornerRadius="10dp"
         app:cardElevation="8dp">
 
-    <RelativeLayout
+
+
+        <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?android:attr/selectableItemBackground">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:transitionName="img"
-        tools:ignore="UnusedAttribute" />
-
-        <TextView
-            android:id="@+id/textAuthor"
+            <ImageView
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_alignStart="@+id/textTitle"
-            android:layout_alignTop="@+id/textPublishedAt"
-            android:layout_alignEnd="@id/textPublishedAt"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="-1dp"
-            android:layout_marginEnd="158dp"
-            android:drawablePadding="10dp"
-            android:ellipsize="end"
-            android:gravity="bottom"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:textColor="@android:color/white" />
+            android:layout_height="275dp"
+            android:scaleType="centerCrop"
+            android:transitionName="img"
+            tools:ignore="UnusedAttribute" />
 
-        <TextView
-            android:id="@+id/textPublishedAt"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="275dp"
+                android:background="@drawable/gradient" />
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/textTitle"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="27dp"
-            android:layout_marginEnd="26dp"
-            android:layout_marginBottom="45dp"
-            android:text="01 January 1990" />
+            <TextView
+                android:id="@+id/textAuthor"
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textTitle"
+                android:layout_alignTop="@+id/textPublishedAt"
+                android:layout_alignEnd="@id/textPublishedAt"
+                android:layout_marginStart="-1dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="189dp"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:fontFamily="serif"
+                android:gravity="bottom"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
-        <TextView
-        android:id="@+id/textTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imageView"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="16dp"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textPublishedAt"
 
-    </RelativeLayout>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textTitle"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="27dp"
+                android:layout_marginBottom="30dp"
+                android:text="01 January 1990"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="-118dp"
+                android:layout_marginRight="16dp"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
 </FrameLayout>
