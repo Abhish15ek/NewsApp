@@ -2,21 +2,19 @@ package com.example.newsapp.ui
 
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.newsapp.DetailActivity
 import com.example.newsapp.R
-import com.example.newsapp.Resource
+import com.example.newsapp.Utils
 import com.example.newsapp.model.NewsModel
-import com.example.newsapp.network.NewsArticle
 
 class Adapter(private val context: Context, private val items: List<NewsModel>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
 
@@ -32,6 +30,7 @@ class Adapter(private val context: Context, private val items: List<NewsModel>) 
         return ViewHolder(view)
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val item = items[position]
         Glide.with(context)
@@ -39,7 +38,7 @@ class Adapter(private val context: Context, private val items: List<NewsModel>) 
             .into(holder.image)
             holder.title.text = item.title
             holder.author.text= item.author
-            holder.date.text = item.publishedAt
+            holder.date.text = Utils().dateFormat(item.publishedAt)
 
         holder.itemView.setOnClickListener {
             val context = holder.itemView.context

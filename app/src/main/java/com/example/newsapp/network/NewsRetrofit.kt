@@ -1,6 +1,5 @@
 package com.example.newsapp.network
 
-import android.util.Log
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -17,10 +16,13 @@ interface NewsInterface {
     @GET("everything")
     suspend fun getHeadlines(@Query("q") q: String = "apple",@Query("page")
     pageNumber: Int = 1, @Query("apikey") apikey: String = API_KEY) : Response<NewsArticle>
+
+
 // Check call on it
 //    @GET("everything")
 //    suspend fun getEverthing(@Query("q") country: String = "in",@Query("page")
 //pageNumber: Int = 1, @Query("apikey") apikey: String = API_KEY) : Response<NewsArticle>
+
 }
 
 object NewsService{

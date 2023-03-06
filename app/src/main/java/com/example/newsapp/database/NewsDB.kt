@@ -11,7 +11,6 @@ import com.example.newsapp.model.NewsModel
 @Database(entities = [NewsModel::class], version = 1)
 abstract class NewsDB : RoomDatabase() {
     abstract fun newsDao(): NewsDao
-// companion is used to make singleton object means singleinstance
     companion object{
         @Volatile
         private var INSTANCE:NewsDB?= null

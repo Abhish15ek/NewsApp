@@ -5,7 +5,7 @@ import com.example.newsapp.model.NewsModel
 
 data class NewsArticle (
     val articles: MutableList<NewsModel>,
-    val status: String,
-    val totalResults: Int
+//    val status: String,
+//    val totalResults: Int
 
-    )
+)
