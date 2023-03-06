@@ -19,7 +19,7 @@ class NewsViewModel(private var newsRepo: NewsRepo) : ViewModel() {
   }
 
   private fun getBreakingNews(q: String) = viewModelScope.launch {
-//    breakingNews.postValue(Resource.Loading())
+    breakingNews.postValue(Resource.Loading())
     val response = newsRepo.getHeadlines(q, breakingNewsPage)
     breakingNews.postValue(handleBreakingNewsResponse(response))
   }
